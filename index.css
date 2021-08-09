@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.mountain{
+    height: 75vh;
+    width: 100vw;
+background-image: url(mountain.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+position: absolute;
+animation: mountainmove linear 8s infinite;
+}
+
+@keyframes mountainmove {
+    0%{
+        transform: translateX(.7vh);
+    }
+    50%{
+        transform: translateY(-2vh);
+    }
+    100%
+{
+    transform: translateX(.7vh);
+}
+}
+.road{
+    height: 50vh;
+    width: 1000vw;
+    background-image: url(road.jpg);
+    background-repeat: repeat-x;
+    position: relative;
+    top: 73vh;
+    animation: roadmove linear 8s infinite ;
+}
+@keyframes roadmove {
+    100%{
+        transform: translateX(-500vw);
+    }
+    
+}
+
+.car{
+    background-image: url(car.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 380px;
+    position: absolute;
+    bottom: 26vh;
+    left: 20vw;
+    animation: movingcar linear  .3s infinite;
+}
+
+@keyframes movingcar{
+   0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+        100%{
+            transform: translateY(-5px);
+        }
+    }
+
+.wheelleft img{
+    width: 4.5vw;
+    position: relative;
+    top: 5.5vh;
+    left: 3.05vw;
+    animation: wheelrotation linear .16s infinite;
+}
+
+.wheelright img{
+    width: 4.5vw;
+    position: relative;
+    left: 15.5vw;
+    top: -3.9vh;
+    animation: wheelrotation linear .16s infinite;
+
+}
+
+@keyframes wheelrotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
